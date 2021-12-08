@@ -33,11 +33,47 @@
     h2 {
       color: var(--White)
     }
+
+    .topImage {
+      /* background-image: url("images/image-equilibrium.jpg");
+      background-repeat: no-repeat;
+      min-height: 250px;
+      background-position: center;
+      background-size: cover; */
+      position: relative;
+      border-radius: 15px;
+    }
+    
+    .topImage__eye--style {
+      max-height: 250px;
+      border-radius: 15px;
+      position: absolute;
+    }
+    
+    .hide {
+      display: none;
+    }
     
     .topImage--style {
       width: 100%;
       border-radius: 15px;
+      max-height: 250px;
+      position: relative;
+      opacity: .5;
     }
+    
+    .topImage:hover {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 250px;
+      background-color: var(--Cyan);
+      /* opacity: .9; */
+    }
+
+    /* .topImage--style:hover {
+      display: none;
+    } */
     
     .topImage__content--style {
       font-size: 18px;
@@ -104,8 +140,9 @@
 </head>
 <body>
   <main>
-    <div class="topImage">
-      <img src="images/image-equilibrium.jpg" class="topImage--style" alt=""/>
+    <div class="topImage" id="topImage">
+      <img src="images/icon-view.svg" id="topImage__eye" class="topImage__eye--style hide" alt="" />
+      <img src="images/image-equilibrium.jpg" id="topImage__equalibrium" class="topImage--style" alt=""/> 
     </div>
     <h2>Equilibrium #3429</h2>
     <p class="topImage__content--style">Our Equilibrium collection promotes balance and calm.</p>
@@ -124,15 +161,16 @@
       <p class="lower__creator">Creation of <span class="creator--style">Jules Wyvern</span></p>
     </div>
   </main>
-  
-
-  
-
-  
-  
-  
-  
-
- 
 </body>
+<script>
+  document.getElementById("topImage").addEventListener('mouseover', function(event){
+    document.getElementById('topImage__eye').classList.remove("hide");
+    document.getElementById("topImage__equalibrium").classList.add('sink');
+  });
+
+  document.getElementById("topImage").addEventListener('mouseout', function(event){
+    document.getElementById('topImage__eye').classList.add("hide");
+    document.getElementById("topImage__equalibrium").classList.remove('sink');
+  });
+</script>
 </html>
