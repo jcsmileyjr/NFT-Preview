@@ -12,6 +12,8 @@
       --Very-dark-blue-card-bg: hsl(216, 50%, 16%);
       --Very-dark-blue-line: hsl(215, 32%, 27%);
       --White: hsl(0, 0%, 100%);
+      --Soft-blue: hsl(215, 51%, 70%);
+      --Cyan: hsl(178, 100%, 50%);
     }
     body {
       min-height: 100vh;
@@ -19,31 +21,101 @@
       justify-content:  center;
       align-items: center;
       background-color: var(--Very-dark-blue-main-bg);
+      margin: 40px 20px;
+    }
+    
+    main {
+      background-color: var(--Very-dark-blue-card-bg);
+      padding: 20px 20px;
+      border-radius: 15px;
     }
 
-    main {
-      /*background-color: var(--Very-dark-blue-card-bg);*/
-      background-color: white;
+    h2 {
+      color: var(--White)
     }
+    
+    .topImage--style {
+      width: 100%;
+      border-radius: 15px;
+    }
+    
+    .topImage__content--style {
+      font-size: 18px;
+      color: var(--Soft-blue);
+    }
+
+    .lowerContent {
+      display: flex;
+      justify-content: space-between;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: var(--Very-dark-blue-line);
+    }
+
+    .lowerContent__title--container {
+      color: var(--Cyan);
+      display: flex;
+      align-items: center;
+      flex: 1;
+    }
+
+    .title__image--style, .time__image--style {
+      margin-right: 5px;
+    }
+
+    .lowerContent__time--container {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      justify-content: flex-end;
+    }
+
+    .time__content--style {
+      color: var(--Soft-blue);
+    }
+
+    .lower__creator {
+      color: var(--Soft-blue);
+    }
+
+    .creator--style {
+      color: var(--White);
+    }
+
+    .lowerContent__lower--container {
+      display: flex;
+      align-items: center;
+    }
+
+    .lower__image--style {
+      max-height: 30px;
+      margin-right: 10px;
+      border-radius: 90px;
+      border: 1px solid var(--White);
+    }
+
   </style>
 </head>
 <body>
   <main>
-    <div class="topImage"></div>
-    <h1>Equilibrium #3429</h1>
-    <p>Our Equilibrium collection promotes balance and calm.</p>
-    <div class="content">
-      <div class="content__title--container">
-        <p>0.041 ETH</p>
+    <div class="topImage">
+      <img src="images/image-equilibrium.jpg" class="topImage--style" alt=""/>
+    </div>
+    <h2>Equilibrium #3429</h2>
+    <p class="topImage__content--style">Our Equilibrium collection promotes balance and calm.</p>
+    <div class="lowerContent">
+      <div class="lowerContent__title--container">
+        <img src="images/icon-ethereum.svg" class="title__image--style" alt=""/>
+        <p class="title__content--style">0.041 ETH</p>
       </div>
-      <div class="content__time--container">
-        <p>3 days left</p>
+      <div class="lowerContent__time--container">
+        <img src="images/icon-clock.svg" alt="" class="time__image--style" />
+        <p class="time__content--style">3 days left</p>
       </div>
-
-      <div class="content__lower--container">
-
-        <p>Creation of Jules Wyvern</p>
-      </div>
+    </div>
+    <div class="lowerContent__lower--container">
+      <img src="images/image-avatar.png" class="lower__image--style" alt="" />
+      <p class="lower__creator">Creation of <span class="creator--style">Jules Wyvern</span></p>
     </div>
   </main>
   
