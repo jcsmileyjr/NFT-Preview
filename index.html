@@ -6,19 +6,54 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> 
   <title>Frontend Mentor | NFT preview card component</title>
   <style>
+    :root {
 
+      --Very-dark-blue-main-bg: hsl(217, 54%, 11%);
+      --Very-dark-blue-card-bg: hsl(216, 50%, 16%);
+      --Very-dark-blue-line: hsl(215, 32%, 27%);
+      --White: hsl(0, 0%, 100%);
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content:  center;
+      align-items: center;
+      background-color: var(--Very-dark-blue-main-bg);
+    }
+
+    main {
+      /*background-color: var(--Very-dark-blue-card-bg);*/
+      background-color: white;
+    }
   </style>
 </head>
 <body>
+  <main>
+    <div class="topImage"></div>
+    <h1>Equilibrium #3429</h1>
+    <p>Our Equilibrium collection promotes balance and calm.</p>
+    <div class="content">
+      <div class="content__title--container">
+        <p>0.041 ETH</p>
+      </div>
+      <div class="content__time--container">
+        <p>3 days left</p>
+      </div>
 
-  Equilibrium #3429
+      <div class="content__lower--container">
 
-  Our Equilibrium collection promotes balance and calm.
-
-  0.041 ETH
-  3 days left
+        <p>Creation of Jules Wyvern</p>
+      </div>
+    </div>
+  </main>
   
-  Creation of Jules Wyvern
+
+  
+
+  
+  
+  
+  
 
  
 </body>
