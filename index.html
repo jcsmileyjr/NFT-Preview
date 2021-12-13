@@ -21,6 +21,7 @@
       justify-content:  center;
       align-items: center;
       background-color: var(--Very-dark-blue-main-bg);
+      margin: 0px;
     }
     
     main {
@@ -35,15 +36,18 @@
     }
 
     .topImage {
-      /* background-image: url("images/image-equilibrium.jpg");
-      background-repeat: no-repeat;
-      min-height: 250px;
-      background-position: center;
-      background-size: cover; */
       position: relative;
       border-radius: 15px;
     }
     
+    .topImage:hover {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 250px;
+      background-color: var(--Cyan);
+    }
+
     .topImage__eye--style {
       max-height: 250px;
       border-radius: 15px;
@@ -53,27 +57,17 @@
     .hide {
       display: none;
     }
+
+    .sink {
+      opacity: .3;
+    }
     
     .topImage--style {
       width: 100%;
       border-radius: 15px;
       max-height: 250px;
       position: relative;
-      opacity: .5;
     }
-    
-    .topImage:hover {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 250px;
-      background-color: var(--Cyan);
-      /* opacity: .9; */
-    }
-
-    /* .topImage--style:hover {
-      display: none;
-    } */
     
     .topImage__content--style {
       font-size: 18px;
@@ -131,6 +125,12 @@
     }
 
     @media only screen and (min-width: 600px) {
+      main {
+        width: 40%;
+      }
+    }
+
+    @media only screen and (min-width: 1400px) {
       main {
         width: 20%;
       }
