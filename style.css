@@ -13,6 +13,7 @@ body {
   align-items: center;
   background-color: var(--Very-dark-blue-main-bg);
   margin: 0px;
+  font-family: "Outfit", sans-serif;
 }
 
 main {
