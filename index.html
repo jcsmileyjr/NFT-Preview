@@ -20,7 +20,7 @@
       <img src="images/icon-view.svg" id="topImage__eye" class="topImage__eye--style hide" alt="" />
       <img src="images/image-equilibrium.jpg" id="topImage__equalibrium" class="topImage--style" alt=""/> 
     </div>
-    <h2>Equilibrium #3429</h2>
+    <h1>Equilibrium #3429</h1>
     <p class="topImage__content--style">Our Equilibrium collection promotes balance and calm.</p>
     <div class="lowerContent">
       <div class="lowerContent__title--container">
@@ -41,12 +41,12 @@
 <script>
   document.getElementById("topImage").addEventListener('mouseover', function(event){
     document.getElementById('topImage__eye').classList.remove("hide");
-    document.getElementById("topImage__equalibrium").classList.add('sink');
+    document.getElementById("topImage__equalibrium").classList.add('lowerOpacity');
   });
 
   document.getElementById("topImage").addEventListener('mouseout', function(event){
     document.getElementById('topImage__eye').classList.add("hide");
-    document.getElementById("topImage__equalibrium").classList.remove('sink');
+    document.getElementById("topImage__equalibrium").classList.remove('lowerOpacity');
   });
 </script>
 </html>
